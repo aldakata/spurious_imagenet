@@ -63,6 +63,8 @@ def get_tiny_images_lmdb():
 
 def get_imagenet_path():
     path = os.path.join(get_base_data_dir(), 'imagenet/')
+    # path = "/scratch_local/owl156-546466/HardNegativeSamples/TrainHardNegativeSamples/negativeDataset/dataset/dataset_pos"
+    path = "/scratch_local/datasets/ImageNet2012"
     return path
 
 def get_imagenet21k_path():

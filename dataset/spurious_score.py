@@ -68,7 +68,7 @@ def get_in1k_to_21k_map():
 
 in_1k_to_21k = get_in1k_to_21k_map()
 in_21k_to_1k = {v: k for (k, v) in in_1k_to_21k.items()}
-
+itof = {94: 0, 105: 1, 554: 5, 562: 6, 466: 4, 682: 7, 288: 2, 309: 3, 752: 8}
 
 def get_probabilities_targets(loader, model, device):
     dataset_length = len(loader.dataset)
@@ -106,6 +106,8 @@ def map_index(num_clases, class_idx):
         #In-21k-P == Winter2021 Release
         #https://github.com/Alibaba-MIIL/ImageNet21K/blob/main/dataset_preprocessing/processing_instructions.md
         raise NotImplementedError()
+    elif num_clases == 9:
+        mapped_idx = itof[class_idx]
     else:
         raise NotImplementedError()
     return mapped_idx

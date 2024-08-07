@@ -73,3 +73,8 @@ def LSUNScenesWrapper(model):
     mean = torch.tensor([0.485, 0.456, 0.406])
     std = torch.tensor([0.229, 0.224, 0.225])
     return NormalizationWrapper(model, mean, std)
+
+def MVPWrapper(model):
+    mean=torch.tensor([0.4579, 0.4519, 0.4121])
+    std=torch.tensor([0.2582, 0.2478, 0.2758])
+    return NormalizationWrapper(model, mean, std)

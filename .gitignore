@@ -1,2 +1,6 @@
 *.png
 *.pt
+*__pycache__
+*.pth
+dataset/robustness-master
+dataset/spurious_imagenet
